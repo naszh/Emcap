@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Canela';
+    src: url('../fonts/Canela-Bold.woff2') format('woff2'),
+        url('../fonts/Canela-Bold.woff') format('woff'),
+        url('../fonts/Canela-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Canela';
+    src: url('../fonts/Canela-Light.woff2') format('woff2'),
+        url('../fonts/Canela-Light.woff') format('woff'),
+        url('../fonts/Canela-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Canela';
+    src: url('../fonts/Canela-Thin.woff2') format('woff2'),
+        url('../fonts/Canela-Thin.woff') format('woff'),
+        url('../fonts/Canela-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT America';
+    src: url('../fonts/GTAmerica-Medium.woff2') format('woff2'),
+        url('../fonts/GTAmerica-Medium.woff') format('woff'),
+        url('../fonts/GTAmerica-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT America';
+    src: url('../fonts/GTAmerica-Light.woff2') format('woff2'),
+        url('../fonts/GTAmerica-Light.woff') format('woff'),
+        url('../fonts/GTAmerica-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Styrene';
+    src: url('../fonts/Styrene-Medium.woff2') format('woff2'),
+        url('../fonts/Styrene-Medium.woff') format('woff'),
+        url('../fonts/Styrene-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Styrene';
+    src: url('../fonts/Styrene-Normal.woff2') format('woff2'),
+        url('../fonts/Styrene-Normal.woff') format('woff'),
+        url('../fonts/Styrene-Normal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
