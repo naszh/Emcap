@@ -1,0 +1,75 @@
+@import "values";
+@import "mixins";
+
+.thoughts {
+    padding: 0 30px;
+    background-color: #fff;
+    .thoughts-wrap {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1400px;
+        padding: 120px 0;
+        width: 100%;
+        h4 {
+            padding: 0 40px;
+            margin-bottom: 40px;
+            width: 100%;
+            font-family: 'Styrene', sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.5;
+            color: $anotherbl;
+        }
+    }
+}
+
+.thoughts__item {
+    padding: 0 40px;
+    width: 50%;
+    h2 {
+        font-family: 'Canela', sans-serif;
+        font-size: 70px;
+        font-weight: 200;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+}
+
+.thoughts-floyd {
+    display: flex;
+    align-items: center;
+    #img-floyd {
+        margin-right: 20px;
+        background-size: cover;
+        border-radius: 50%;
+        background-image: url(../img/joe_floyd.jpeg);
+        height: 100px;
+        width: 100px;
+    }
+    a {
+        @include thoughts-a();
+    }
+}
+
+.thoughts__item__right {
+    padding: 0 40px;
+    width: 50%;
+    h3 {
+        font-family: 'Canela', sans-serif;
+        font-size: 40px;
+        font-weight: 200;
+        line-height: 1.2;
+        margin: 0 0 30px;
+    }
+    a {
+        @include thoughts-a();
+    }
+}
+
+.thoughts__separator {
+    margin: 60px 0;
+    border-bottom: 3px double #dcccc1;
+}
+
