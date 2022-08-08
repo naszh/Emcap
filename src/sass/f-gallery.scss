@@ -1,0 +1,103 @@
+@import "values";
+@import "mixins";
+
+.f-gallery {
+    padding: 0 30px 180px;
+    .f-gallery-wrap {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1400px;
+        width: 100%;
+        h2 {
+            font-family: 'Canela', sans-serif;
+            font-size: 110px;
+            color: $darkerblue;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1.5px $darkerblue;
+            font-weight: 700;
+            margin-bottom: 60px;
+            padding: 0 40px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+.gallery__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 80px;
+    padding: 0 40px;
+    justify-items: center;
+    .gallery__item {
+        margin-bottom: 60px;
+        cursor: pointer;
+        img {
+            display: block;
+            width: 386px;
+        }
+        p, span {
+            margin-top: 10px;
+            font-family: 'GT America', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: $anotherbl;
+        }
+    }
+}
+
+.item-quotes {
+    .quotes-text {
+        background-color: $darkerblue;
+        color: #fff;
+        position: relative;
+        transition: background-color .3s ease-in-out;
+        h3 {
+            position: absolute;
+            padding: 40px;
+            left: 0;
+            right: 0;
+            margin-bottom: 0;
+            font-family: 'Canela', sans-serif;
+            font-size: 40px;
+            font-weight: 200;
+            line-height: 1.2;
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.item-quotes h3::before {
+    content: "";
+    background: url(../img/quotes.svg);
+    display: block;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 40px;
+}
+
+.f-gallery button {
+    #bt-link {
+        @include bt-link();
+        background-color: #fff;
+        color: $black;
+    }
+    #bt-link::before, #bt-link::after {
+        content: "";
+        position: absolute;
+    }
+    #bt-link::before {
+        border: 1px solid $peach;
+        inset: 7px 5px 5px 7px;
+    }
+    #bt-link::after {
+        border: 1px solid $peach;
+        inset: 5px 7px 7px 5px;
+    }
+}

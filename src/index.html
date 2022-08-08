@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./sass/header.scss">
     <link rel="stylesheet" href="./sass/founders.scss">
     <link rel="stylesheet" href="./sass/theses.scss">
+    <link rel="stylesheet" href="./sass/f-gallery.scss">
 </head>
 <body>
     <header>
@@ -157,43 +158,52 @@
         </section>
 
         <section class="f-gallery">
-            <h2>Founders</h2>
-            <div class="gallery__container">
-                <div class="gallery__item">
-                    <img src="./img/godard_abel.png" alt="Godard Abel">
-                    <p>Godard Abel</p>
-                    <span>G2</span>
-                </div>
-                <div class="gallery__item">
-                    <div>
-                        <img src="./img/quotes.svg" alt="Quotes">
-                        <h3>Emergence is <span>bold</span> and willing to take risks where other VCs aren't.</h3>
+            <div class="f-gallery-wrap">
+                <h2>Founders</h2>
+                <div class="gallery__container">
+                    <div class="gallery__item">
+                        <img src="./img/godard_abel.png" alt="Godard Abel">
+                        <p><strong>Godard Abel</strong><br>
+                            <span>G2</span>
+                        </p>
                     </div>
-                    <p>Jim Benton, CEO</p>
-                    <span>Chorus</span>
+                    <div class="gallery__item item-quotes">
+                            <!-- <img src="./img/quotes.svg" alt="Quotes"> -->
+                            <div class="quotes-text">
+                                <h3>Emergence is <a href="#">bold</a> and willing to take risks where other VCs aren't.</h3>
+                                <img src="./img/spacer.png">
+                            </div>
+                        <p><strong>Jim Benton, CEO</strong><br>
+                            <span>Chorus</span>
+                        </p>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="./img/nima_ghamsari.jpg" alt="Nima Ghamsari">
+                        <p><strong>Nima Ghamsari</strong><br>
+                            <span>Blend</span>
+                        </p>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="./img/kieran_snyder.jpg" alt="Kieran Snyder">
+                        <p><strong>Kieran Snyder</strong><br>
+                            <span>Textio</span>
+                        </p>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="./img/jett_mccandless.jpg" alt="Jett McCandless">
+                        <p><strong>McCandless</strong><br>
+                            <span>Project44</span>
+                        </p>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="./img/michele_romanow.jpg" alt="Michele Romanow">
+                        <p><strong>Michele Romanow</strong><br>
+                            <span>Clearco</span>
+                        </p>
+                    </div>
                 </div>
-                <div class="gallery__item">
-                    <img src="./img/nima_ghamsari.jpg" alt="Nima Ghamsari">
-                    <p>Nima Ghamsari</p>
-                    <span>Blend</span>
-                </div>
-                <div class="gallery__item">
-                    <img src="./img/kieran_snyder.jpg" alt="Kieran Snyder">
-                    <p>Kieran Snyder</p>
-                    <span>Textio</span>
-                </div>
-                <div class="gallery__item">
-                    <img src="./img/jett_mccandless.jpg" alt="Jett McCandless">
-                    <p>Jett McCandless</p>
-                    <span>Project44</span>
-                </div>
-                <div class="gallery__item">
-                    <img src="./img/michele_romanow.jpg" alt="Michele Romanow">
-                    <p>Michele Romanow</p>
-                    <span>Clearco</span>
-                </div>
+                <button type="button"><a id="bt-link" href="#">All Founders</a></button>
             </div>
-            <button type="button">All Founders</button>
         </section>
 
         <section class="thoughts">

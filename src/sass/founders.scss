@@ -90,8 +90,6 @@
             }
         }
         button {
-            background-color: inherit;
-            // position: relative;
             width: fit-content;
             #bt-link {
                 @include bt-link();
