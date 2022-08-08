@@ -1,6 +1,6 @@
 @font-face {
   font-family: Canela;
-  src: url("6859f0b83d8967ed305f27a02a100013.5c1f2a8e.woff2") format("woff2"), url("6859f0b83d8967ed305f27a02a100013.4e4af256.woff") format("woff"), url("6859f0b83d8967ed305f27a02a100013.f3d68735.ttf") format("truetype");
+  src: url("Canela-Bold.cea00576.woff2") format("woff2"), url("Canela-Bold.f768d042.woff") format("woff"), url("Canela-Bold.4b087ccd.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: Canela;
-  src: url("0cc9644316389a101baf8920d8564e34.5fbc49fc.woff2") format("woff2"), url("0cc9644316389a101baf8920d8564e34.7091ea8d.woff") format("woff"), url("0cc9644316389a101baf8920d8564e34.95639fc1.ttf") format("truetype");
+  src: url("Canela-Light.00f7a09b.woff2") format("woff2"), url("Canela-Light.9ac1af4e.woff") format("woff"), url("Canela-Light.2d9b5ace.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: Canela;
-  src: url("48907e3b22c53f0ee2c4ab93bf6f13ef.df50d2ff.woff2") format("woff2"), url("48907e3b22c53f0ee2c4ab93bf6f13ef.4b8efb5c.woff") format("woff"), url("48907e3b22c53f0ee2c4ab93bf6f13ef.8b6504e1.ttf") format("truetype");
+  src: url("Canela-Thin.8abe4c14.woff2") format("woff2"), url("Canela-Thin.754e1783.woff") format("woff"), url("Canela-Thin.cda97c6e.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: Styrene;
-  src: url("775fedba5bfb237c0aacdbd19c8cfe44.301fd291.woff2") format("woff2"), url("775fedba5bfb237c0aacdbd19c8cfe44.0a482c56.woff") format("woff"), url("775fedba5bfb237c0aacdbd19c8cfe44.4be6e601.ttf") format("truetype");
+  src: url("Styrene-Medium.f940831b.woff2") format("woff2"), url("Styrene-Medium.2771e618.woff") format("woff"), url("Styrene-Medium.7142e448.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: Styrene;
-  src: url("8680197c4f09c471c4edc54790b4aecd.aa5a357e.woff2") format("woff2"), url("8680197c4f09c471c4edc54790b4aecd.ac3bb7c6.woff") format("woff"), url("8680197c4f09c471c4edc54790b4aecd.024b9861.ttf") format("truetype");
+  src: url("Styrene-Normal.9955243c.woff2") format("woff2"), url("Styrene-Normal.cbaecf72.woff") format("woff"), url("Styrene-Normal.e3c215b0.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

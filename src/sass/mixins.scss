@@ -1,0 +1,100 @@
+@mixin founder {
+    display: flex;
+    margin: 0 auto 180px;
+    padding: 0 40px;
+    max-width: 1400px;
+    width: 100%;
+}
+    
+@mixin founders__portrait_span {
+    margin-top: 60px;
+    position: absolute;
+    z-index: 1;
+    font-family: 'Canela', sans-serif;
+    font-size: 110px;
+    font-weight: 700;
+    // top: 0;
+    // left: 0;
+    text-transform: uppercase;
+    // transform: translateX(-50%);
+    writing-mode: vertical-lr;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px $black;
+    line-height: 100%;
+}
+
+@mixin portrait-wrapper {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    cursor: pointer;
+}
+
+@mixin portrait {
+    height: 800px;
+    width: auto;
+}
+
+@mixin before-after {
+    content: " ";
+    position: absolute;
+    // left: 0;
+    background-size: 430px 80px;
+    display: block;
+    height: 80px;
+    width: 430px;
+    z-index: -1;
+}
+
+@mixin founders__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0;
+    max-width: 600px;
+}
+
+@mixin about-h2 {
+    font-family: 'Canela', sans-serif;
+    font-size: 56px;
+    font-weight: 200;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+@mixin bt-link {
+    display: block;
+    position: relative;
+    font-family: 'Styrene', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 30px 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin theses {
+    display: inline-block;
+    margin-top: 40px;
+    width: 100%;
+    font-family: 'Styrene', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+@mixin theses-b-a {
+    border-bottom: 1px solid;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: .25;
+    position: absolute;
+    transition: width .3s ease-out;
+}

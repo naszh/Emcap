@@ -1,0 +1,58 @@
+@import "values";
+
+
+img {
+    width: 50px;
+}
+
+body {
+    background-color: #f9f4f1;
+}
+
+header {
+    span {
+        padding-top: 10px;
+        display: block;
+        font-family: 'Canela', sans-serif;
+        font-size: 19.2px;
+        font-weight: 300;
+        letter-spacing: 3px;
+        color: $peach;
+        text-align: right;
+        a {
+            font-family: 'Canela', sans-serif;
+            font-weight: 300;
+            color: #41424a;
+            letter-spacing: 0;
+            margin-right: 80px;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px 40px;
+    img {
+        width: 179px;
+        height: 45px;
+    }
+    .nav__row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        li {
+        font-family: 'Styrene', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-right: 20px;
+        }
+        a {
+            color: $black;
+            padding-bottom: 2px;
+        }
+    }
+}
