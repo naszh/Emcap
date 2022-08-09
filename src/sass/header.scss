@@ -1,8 +1,8 @@
 @import "values";
 
-
 img {
     width: 50px;
+    cursor: pointer;
 }
 
 body {
@@ -19,6 +19,9 @@ header {
         letter-spacing: 3px;
         color: $peach;
         text-align: right;
+        div {
+            display: inline;
+            position: relative;
         a {
             font-family: 'Canela', sans-serif;
             font-weight: 300;
@@ -27,6 +30,22 @@ header {
             margin-right: 80px;
         }
     }
+    }
+}
+
+#border::after {
+    content: "";
+    width: 156px;
+    z-index: -1;
+    transition: all .2s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid $peach;
+}
+
+#border:hover::after {
+    bottom: -3px;
 }
 
 .nav {
@@ -55,4 +74,8 @@ header {
             padding-bottom: 2px;
         }
     }
+}
+
+.nav__row a:hover {
+    border-bottom: 1px solid $peach;
 }

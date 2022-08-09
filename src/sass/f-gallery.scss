@@ -39,14 +39,21 @@
             display: block;
             width: 386px;
         }
-        p, span {
+        p {
             margin-top: 10px;
             font-family: 'GT America', sans-serif;
             font-size: 18px;
             font-weight: 300;
             line-height: 1.5;
             color: $anotherbl;
+            transition: color .3s ease-in-out;
         }
+    }
+}
+
+.gallery__item:hover {
+    p {
+    color: $peach;
     }
 }
 
@@ -71,6 +78,10 @@
             }
         }
     }
+}
+
+.quotes-text:hover {
+    background-color: #324f6b;
 }
 
 .item-quotes h3::before {

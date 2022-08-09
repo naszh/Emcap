@@ -40,9 +40,54 @@
             a {
                 font: inherit;
                 color: $black;
+                position: relative;
             }
         }
     }
+}
+
+#canvas-g::after {
+    content: "";
+    width: 200px;
+    height: 20px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-image: url(../img/canvas-grey.png);
+    transition: all .2s ease-in-out;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+#canvas-g:hover::after {
+    bottom: -6px;
+}
+#canvas-g:hover {
+    color: $peach;
+}
+
+#canvas-grey-green::after {
+    @include canvas-grey-green();
+}
+#canvas-grey-green:hover::after {
+    bottom: -8px;
+}
+#canvas-grey-green:hover {
+    color: #67a582;
+}
+
+#canvas-blue-pink::after {
+    @include canvas-blue-pink();
+}
+#canvas-blue-pink:hover::after {
+    bottom: -8px;
+}
+#canvas-blue-pink:hover {
+    color:#ffb7a9;
+}
+
+.canvas-width#canvas-blue-pink::after {
+    width: 180px;
 }
 
 .founders__odd {
@@ -87,10 +132,15 @@
             @include about-h2();
             a {
                 color: $peach;
+                position: relative;
             }
         }
-        button {
+        #founders__odd-bt {
+            display: inline-block;
             width: fit-content;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
             #bt-link {
                 @include bt-link();
                 background-color: #fff;
@@ -123,18 +173,22 @@
                 a {
                     color: $black;
                     position: relative;
+                    transition: all .3s ease-out;
                     z-index: 0;
                     padding-bottom: 2px;
                 }
                 a::before {
                     width: 100%;
-                }
-                // a::after {
-                //     width: 0;
-                //     z-index: 1;
-                // }
-                a::before, a::after {
                     @include theses-b-a();
+                }
+                a::after {
+                    width: 0;
+                    z-index: 1;
+                    @include theses-b-a();
+                }
+                a:hover::after {
+                opacity: .75;
+                width: 100%;
                 }
             }
         }
@@ -158,11 +212,12 @@
             @include about-h2();
             a {
                 color: $blue;
+                position: relative;
             }
         }
         button {
             background-color: inherit;
-            // position: relative;
+            position: relative;
             width: fit-content;
             #bt-link {
                 @include bt-link();
@@ -201,9 +256,16 @@
                 }
                 a::before {
                     width: 100%;
-                }
-                a::before, a::after {
                     @include theses-b-a();
+                }
+                a::after {
+                    width: 0;
+                    z-index: 1;
+                    @include theses-b-a();
+                }
+                a:hover::after {
+                opacity: .75;
+                width: 100%;
                 }
             }
         }

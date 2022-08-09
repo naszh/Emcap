@@ -28,13 +28,21 @@
 .thoughts__item {
     padding: 0 40px;
     width: 50%;
-    h2 {
-        font-family: 'Canela', sans-serif;
-        font-size: 70px;
-        font-weight: 200;
-        line-height: 1.2;
-        margin-bottom: 30px;
+    a {
+        color: $anotherbl;
+        transition: color .3s ease-in-out;
+        h2 {
+            font-family: 'Canela', sans-serif;
+            font-size: 70px;
+            font-weight: 200;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
     }
+}
+
+.thoughts__item a:hover {
+    color: $peach;
 }
 
 .thoughts-floyd {
@@ -47,25 +55,60 @@
         background-image: url(../img/joe_floyd.jpeg);
         height: 100px;
         width: 100px;
+        cursor: pointer;
     }
     a {
         @include thoughts-a();
+    }
+    a::before {
+        width: 100%;
+        @include theses-b-a();
+    }
+    a::after {
+        width: 0;
+        z-index: 1;
+        @include theses-b-a();
+    }
+    a:hover::after {
+    opacity: .75;
+    width: 100%;
     }
 }
 
 .thoughts__item__right {
     padding: 0 40px;
     width: 50%;
-    h3 {
+    a {
+        color: $anotherbl;
+        transition: color .3s ease-in-out;
+        h3 {
         font-family: 'Canela', sans-serif;
         font-size: 40px;
         font-weight: 200;
         line-height: 1.2;
         margin: 0 0 30px;
+        }
     }
     a {
         @include thoughts-a();
     }
+    a::before {
+        width: 100%;
+        @include theses-b-a();
+    }
+    a::after {
+        width: 0;
+        z-index: 1;
+        @include theses-b-a();
+    }
+    a:hover::after {
+    opacity: .75;
+    width: 100%;
+    }
+}
+
+.thoughts__item__right a:hover {
+    color: $peach;
 }
 
 .thoughts__separator {
@@ -73,3 +116,9 @@
     border-bottom: 3px double #dcccc1;
 }
 
+.thoughts-bottom {
+    padding-bottom: 2px;
+    position: relative;
+    transition: all .3s ease-out;
+    z-index: 0;
+}

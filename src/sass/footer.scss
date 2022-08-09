@@ -1,4 +1,5 @@
 @import "values";
+@import "mixins";
 
 footer {
     background-color: $darkerblue;
@@ -41,6 +42,7 @@ footer {
         margin-top: 0;
         a {
             color: #fff;
+            position: relative;
         }
     }
     .footer__nav {
@@ -56,9 +58,36 @@ footer {
             a {
                 color: #fff;
                 padding-bottom: 2px;
+                position: relative;
+            }
+            a::before {
+                width: 100%;
+                @include theses-b-a();
+            }
+            a::after {
+                width: 0;
+                z-index: 1;
+                @include theses-b-a();
+            }
+            a:hover::after {
+            opacity: .75;
+            width: 100%;
             }
         }
     }
+}
+
+#canvas-b::after {
+    content: "";
+    width: 160px;
+    height: 20px;
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-image: url(../img/canvas-blue.png);
+    transition: all .2s ease-in-out;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
 }
 
 .footer__second {
@@ -105,6 +134,21 @@ footer {
             line-height: 1.5;
             a {
                 color: #fff;
+                padding-bottom: 2px;
+                position: relative;
+            }
+            a::before {
+                width: 100%;
+                @include theses-b-a();
+            }
+            a::after {
+                width: 0;
+                z-index: 1;
+                @include theses-b-a();
+            }
+            a:hover::after {
+            opacity: .75;
+            width: 100%;
             }
         }
     }

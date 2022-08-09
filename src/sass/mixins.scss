@@ -13,10 +13,7 @@
     font-family: 'Canela', sans-serif;
     font-size: 110px;
     font-weight: 700;
-    // top: 0;
-    // left: 0;
     text-transform: uppercase;
-    // transform: translateX(-50%);
     writing-mode: vertical-lr;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1.5px $black;
@@ -63,6 +60,32 @@
     margin-bottom: 30px;
 }
 
+@mixin canvas-grey-green {
+    content: "";
+    width: 140px;
+    height: 20px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-image: url(../img/canvas-grey.png);
+    transition: all .3s ease-in-out;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+@mixin canvas-blue-pink {
+    content: "";
+    width: 200px;
+    height: 20px;
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-image: url(../img/canvas-blue.png);
+    transition: all .3s ease-in-out;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
 @mixin bt-link {
     display: block;
     position: relative;
@@ -74,6 +97,8 @@
     padding: 30px 40px;
     text-align: center;
     text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    z-index: 1;
 }
 
 @mixin theses {
