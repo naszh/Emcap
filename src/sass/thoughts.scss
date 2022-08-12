@@ -4,6 +4,9 @@
 .thoughts {
     padding: 0 30px;
     background-color: #fff;
+    @media (max-width: 600px) {
+        padding: 0;
+    }
     .thoughts-wrap {
         align-items: flex-start;
         display: flex;
@@ -12,6 +15,9 @@
         max-width: 1400px;
         padding: 120px 0;
         width: 100%;
+        @media (max-width: 1070px) {
+            padding: 60px 0;
+        }
         h4 {
             padding: 0 40px;
             margin-bottom: 40px;
@@ -21,6 +27,9 @@
             font-weight: 500;
             line-height: 1.5;
             color: $anotherbl;
+            @media (max-width: 1350px) {
+                padding: 0 20px;
+            }
         }
     }
 }
@@ -28,6 +37,12 @@
 .thoughts__item {
     padding: 0 40px;
     width: 50%;
+    @media (max-width: 1350px) {
+        padding: 0 20px;
+    }
+    @media (max-width: 1070px) {
+        width: 100%;
+    }
     a {
         color: $anotherbl;
         transition: color .3s ease-in-out;
@@ -37,6 +52,12 @@
             font-weight: 200;
             line-height: 1.2;
             margin-bottom: 30px;
+            @media (max-width: 1070px) {
+                font-size: 60px;
+            }
+            @media (max-width: 600px) {
+                font-size: 41px;
+            }
         }
     }
 }
@@ -48,6 +69,9 @@
 .thoughts-floyd {
     display: flex;
     align-items: center;
+    @media (max-width: 1070px) {
+        display: block;
+    }
     #img-floyd {
         margin-right: 20px;
         background-size: cover;
@@ -56,28 +80,21 @@
         height: 100px;
         width: 100px;
         cursor: pointer;
-    }
-    a {
-        @include thoughts-a();
-    }
-    a::before {
-        width: 100%;
-        @include theses-b-a();
-    }
-    a::after {
-        width: 0;
-        z-index: 1;
-        @include theses-b-a();
-    }
-    a:hover::after {
-    opacity: .75;
-    width: 100%;
+        @media (max-width: 1070px) {
+            display: none;
+        }
     }
 }
 
 .thoughts__item__right {
     padding: 0 40px;
     width: 50%;
+    @media (max-width: 1350px) {
+        padding: 0 20px;
+    }
+    @media (max-width: 1070px) {
+        width: 100%;
+    }
     a {
         color: $anotherbl;
         transition: color .3s ease-in-out;
@@ -87,23 +104,13 @@
         font-weight: 200;
         line-height: 1.2;
         margin: 0 0 30px;
+        @media (max-width: 1070px) {
+            font-size: 60px;
         }
-    }
-    a {
-        @include thoughts-a();
-    }
-    a::before {
-        width: 100%;
-        @include theses-b-a();
-    }
-    a::after {
-        width: 0;
-        z-index: 1;
-        @include theses-b-a();
-    }
-    a:hover::after {
-    opacity: .75;
-    width: 100%;
+        @media (max-width: 600px) {
+            font-size: 41px;
+        }
+        }
     }
 }
 
@@ -111,9 +118,21 @@
     color: $peach;
 }
 
-.thoughts__separator {
-    margin: 60px 0;
-    border-bottom: 3px double #dcccc1;
+.thoughts-bottom {
+    @include thoughts-a();
+}
+.thoughts-bottom::before {
+    width: 100%;
+    @include theses-b-a();
+}
+.thoughts-bottom::after {
+    width: 0;
+    z-index: 1;
+    @include theses-b-a();
+}
+.thoughts-bottom:hover::after {
+opacity: .75;
+width: 100%;
 }
 
 .thoughts-bottom {
@@ -121,4 +140,45 @@
     position: relative;
     transition: all .3s ease-out;
     z-index: 0;
+}
+
+.item-wrap1 {
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.item-wrap1::before {
+    border-bottom: 1px solid #dcccc1;
+    border-top: 1px solid #dcccc1;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.item-pseudo {
+    @media (max-width: 1070px) {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        position: relative;
+    }
+}
+
+@media (max-width: 1070px) {
+    .item-pseudo::before {
+        border-bottom: 1px solid #dcccc1;
+        border-top: 1px solid #dcccc1;
+        bottom: 0;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.thoughts__item-wrap {
+    position: relative;
 }

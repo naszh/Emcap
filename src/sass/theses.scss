@@ -1,13 +1,32 @@
 @import "mixins";
 @import "values";
 
-.theses {
-    position: relative;
-    padding: 0 30px 80px;
-}
 
 .wave {
     height: 160px;
+    background-color: #15403d;
+    border-top-left-radius: 40%;
+    position: relative;
+    z-index: -1;
+}
+
+.wave2 { 
+width: 1135px;
+height: 250px;
+border-radius: 50%;
+background-color: #f9f4f1;
+position: absolute;
+bottom: 70px;
+right: -40px;
+z-index: -2;
+}
+
+.theses {
+    position: relative;
+    padding: 0 30px;
+    @media (max-width: 600px) {
+        padding: 0;
+    }
 }
 
 .theses::after {
@@ -38,6 +57,10 @@
     width: 66.6666666667%;
     text-align: center;
     padding: 0 40px;
+    @media (max-width: 1350px) {
+        width: 83.3333333333%;
+        padding: 0 20px;
+    }
     h5 {
         display: block;
         font-family: 'Styrene', sans-serif;
@@ -55,6 +78,9 @@
         font-weight: 200;
         line-height: 1.2;
         margin-bottom: 30px;
+        @media (max-width: 600px) {
+            font-size: 40px;
+        }
     }
     p {
         max-width: 70%;
@@ -65,6 +91,9 @@
         font-weight: 300;
         line-height: 1.5;
         color: #fff;
+        @media (max-width: 1070px) {
+            max-width: 100%;
+        }
     }
 }
 
@@ -79,6 +108,9 @@
         margin-top: 40px;
         width: 100%;
         cursor: pointer;
+        @media (max-width: 1350px) {
+            padding: 0 20px;
+        }
         .theses__item {
             display: flex;
             align-items: center;
@@ -90,6 +122,13 @@
             height: 100%;
             position: relative;
             transition: transform .3s ease-in-out;
+            @media (max-width: 1070px) {
+                display: block;
+                padding: 60px;
+            }
+            @media (max-width: 600px) {
+                padding: 30px;
+            }
             h2 {
                 font-family: 'Canela', sans-serif;
                 font-size: 70px;
@@ -98,6 +137,12 @@
                 line-height: 1.2;
                 margin-right: 60px;
                 flex: 1 0 40%;
+                @media (max-width: 1070px) {
+                    margin: 0 auto 30px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 41px;
+                }
             }
             .theses__decription {
                 p {

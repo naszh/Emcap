@@ -5,6 +5,9 @@ footer {
     background-color: $darkerblue;
     padding: 0 30px;
     color: #fff;
+    @media (max-width: 600px) {
+        padding: 0;
+    }
     .footer-wrap {
         align-items: flex-start;
         display: flex;
@@ -14,6 +17,9 @@ footer {
         padding-bottom: 180px;
         position: relative;
         width: 100%;
+        @media (max-width: 900px) {
+            padding-bottom: 80px;
+        }
     }
 }
 
@@ -33,6 +39,12 @@ footer {
 .footer__first {
     padding: 60px 40px 0;
     width: 41.6666666667%;
+    @media (max-width: 1350px) {
+        padding: 60px 20px 0;
+    }
+    @media (max-width: 900px) {
+        width: 100%;
+    }
     h3 {
         font-family: 'Canela', sans-serif;
         font-size: 40px;
@@ -95,25 +107,35 @@ footer {
     margin-left: 8.3333333333%;
     width: 25%;
     position: relative;
+    @media (max-width: 1350px) {
+        padding: 60px 20px 0;
+    }
+    @media (max-width: 900px) {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 #footer-vertical {
+    @media (min-width: 1070px) {
     position: absolute;
     right: 100%;
     top: 60px;
     writing-mode: vertical-lr;
+    }
     h6 {
         font-family: 'Styrene', sans-serif;
         font-size: 14px;
         font-weight: 500;
         letter-spacing: 2px;
         line-height: 1.2;
-        margin-bottom: 20px;
         text-transform: uppercase;
         position: relative;
-        margin-top: 0;
         margin-block-start: 2.33em;
         margin-block-end: 2.33em;
+        @media (max-width: 1070px) {
+            margin-block: 0 20px;
+        }
     }
 }
 
@@ -154,21 +176,29 @@ footer {
     }
 }
 
-.footer__second::before, .footer__third::before {
-    border-bottom-color: #324f6b;
-    border-left: 1px solid #324f6b;
-    border-right: 1px solid #324f6b;
-    border-top-color: #324f6b;
-    bottom: 0;
-    content: "";
-    left: -3px;
-    position: absolute;
-    top: 0;
-    width: 3px;
+@media (min-width: 1070px) {
+    .footer__second::before, .footer__third::before {
+        border-bottom-color: #324f6b;
+        border-left: 1px solid #324f6b;
+        border-right: 1px solid #324f6b;
+        border-top-color: #324f6b;
+        bottom: 0;
+        content: "";
+        left: -3px;
+        position: absolute;
+        top: 0;
+        width: 3px;
+    }
 }
 
 .footer__third {
     padding: 60px 40px 0;
     width: 25%;
     position: relative;
+    @media (max-width: 1350px) {
+        padding: 60px 20px 0;
+    }
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 }

@@ -1,9 +1,11 @@
 @mixin founder {
     display: flex;
-    margin: 0 auto 180px;
     padding: 0 40px;
     max-width: 1400px;
     width: 100%;
+    @media (max-width: 1350px) {
+        padding: 0 20px;
+    }
 }
     
 @mixin founders__portrait_span {
@@ -21,7 +23,6 @@
 }
 
 @mixin portrait-wrapper {
-    height: 100%;
     position: relative;
     width: 100%;
     z-index: 0;
@@ -31,12 +32,19 @@
 @mixin portrait {
     height: 800px;
     width: auto;
+    @media (max-width: 1350px) {
+        height: 700px;
+    }
+    @media (max-width: 900px) {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+    }
 }
 
 @mixin before-after {
     content: " ";
     position: absolute;
-    // left: 0;
     background-size: 430px 80px;
     display: block;
     height: 80px;
@@ -49,7 +57,10 @@
     flex-direction: column;
     justify-content: center;
     padding: 60px 0;
-    max-width: 600px;
+    max-width: 100%;
+    @media (max-width: 1070px) {
+        padding: 30px 0 0;
+    }
 }
 
 @mixin about-h2 {
@@ -58,6 +69,12 @@
     font-weight: 200;
     line-height: 1.2;
     margin-bottom: 30px;
+    @media (max-width: 1070px) {
+        font-size: 48px;
+    }
+    @media (max-width: 600px) {
+        font-size: 40px;
+    }
 }
 
 @mixin canvas-grey-green {
@@ -71,6 +88,12 @@
     position: absolute;
     bottom: -3px;
     left: 0;
+    @media (max-width: 1070px) {
+        width: 120px;
+    }
+    @media (max-width: 600px) {
+        width: 100px;
+    }
 }
 
 @mixin canvas-blue-pink {
@@ -84,6 +107,12 @@
     position: absolute;
     bottom: -3px;
     left: 0;
+    @media (max-width: 1070px) {
+        width: 170px;
+    }
+    @media (max-width: 600px) {
+        width: 140px;
+    }
 }
 
 @mixin bt-link {

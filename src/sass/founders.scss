@@ -2,12 +2,25 @@
 @import "mixins";
 
 
-.founders {
+.founders_contain {
     padding: 0 30px;
+    margin-bottom: 170px;
+    @media (max-width: 1070px) {
+        margin-bottom: 80px;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: 40px;
+        padding: 0;
+    }
+}
+
+.even-bg {
+    @media (max-width: 1070px) {
+        background-color: #466684;
+    }
 }
 
 .founders__title {
-    margin-bottom: 60px;
     margin-top: 60px;
     align-items: flex-start;
     display: flex;
@@ -16,10 +29,20 @@
     margin: 60px auto 120px;
     max-width: 1400px;
     width: 100%;
+    @media (max-width: 1070px) {
+        margin: 30px auto;
+    }
     div {
         padding-left: 40px;
         padding-right: 40px;
         width: 66.6666666667%;
+        @media (max-width: 1350px) {
+            padding: 0 20px;
+            width: 83.3333333333%;
+        }
+        @media (max-width: 900px) {
+            width: 100%;
+        }
         h5 {
             font-family: 'Styrene', sans-serif;
             color: $peach;
@@ -36,7 +59,9 @@
             font-weight: 200;
             text-align: center;
             line-height: 1.2;
-            padding: 0 40px;
+            @media (max-width: 600px) {
+                font-size: 41px;
+            }
             a {
                 font: inherit;
                 color: $black;
@@ -57,6 +82,9 @@
     position: absolute;
     bottom: -1px;
     left: 0;
+    @media (max-width: 600px) {
+        width: 115px;
+    }
 }
 
 #canvas-g:hover::after {
@@ -88,17 +116,38 @@
 
 .canvas-width#canvas-blue-pink::after {
     width: 180px;
+    @media (max-width: 1070px) {
+        width: 150px;
+    }
+    @media (max-width: 600px) {
+        width: 125px;
+    }
 }
 
 .founders__odd {
     @include founder();
     color: $black;
+    @media (max-width: 900px) {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
     #vertical {
         @include founders__portrait_span();
         transform: translateX(-50%);
+        @media (max-width: 1350px) {
+            visibility: hidden;
+        }
     }
     .founders__portrait {
         padding-right: 120px;
+        @media (max-width: 1070px) {
+            padding-right: 60px;
+        }
+        @media (max-width: 900px) {
+            padding-right: 0;
+        }
         .portrait-wrapper {
             @include portrait-wrapper();
             #portrait {
@@ -107,10 +156,16 @@
             ::before {
                 bottom: calc(100% - 5px);
                 background-image: url(../img/eric-peter-josh_before.png);
+                @media (max-width: 1070px) {
+                    visibility: hidden;
+                }
             }
             ::after {
                 top: calc(100% - 5px);
                 background-image: url(../img/eric-peter-josh_after.png);
+                @media (max-width: 1070px) {
+                    visibility: hidden;
+                }
             }
             ::before, ::after {
                 @include before-after();
@@ -127,6 +182,12 @@
             height: 30px;
             width: 133.5px;
             margin-bottom: 30px;
+            @media (max-width: 900px) {
+                bottom: 100%;
+                position: absolute;
+                margin: 0;
+                background-color: #f9f4f1;
+            }
         }
         h2 {
             @include about-h2();
@@ -141,6 +202,9 @@
             position: relative;
             overflow: hidden;
             z-index: 0;
+            @media (max-width: 600px) {
+                display: none;
+            }
             #bt-link {
                 @include bt-link();
                 background-color: #fff;
@@ -195,6 +259,17 @@
     }
 }
 
+#bt-link-adapt {
+    text-decoration: underline;
+    color: #e5745d;
+    font-family: 'Styrene', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    @media (min-width: 600px) {
+        display: none;
+    }
+}
+
 #hover:hover::after, #hover:hover::before {
     transition: all .3s cubic-bezier(.47,.22,.2,.97);
     margin: 5px 0;
@@ -206,8 +281,17 @@
     padding-bottom: 80px;
     position: relative;
     justify-content: space-between;
+    @media (max-width: 900px) {
+        flex-direction: column-reverse;
+        padding: 0 20px 60px;
+        width: 100%;
+    }
     .founders__about {
         @include founders__about();
+        @media (max-width: 900px) {
+            position: relative;
+            padding: 0;
+        }
         h2 {
             @include about-h2();
             a {
@@ -219,6 +303,9 @@
             background-color: inherit;
             position: relative;
             width: fit-content;
+            @media (max-width: 600px) {
+                display: none;
+            }
             #bt-link {
                 @include bt-link();
                 background-color: #324f6b;
@@ -278,10 +365,24 @@
         transform: translateX(50%);
         right: 40px;
         margin-top: 30px;
+        @media (max-width: 1350px) {
+            visibility: hidden;
+        }
     }
     .founders__portrait {
         padding-left: 120px;
-        margin-top: -30px;
+        top: -30px;
+        padding-bottom: 80px;
+        position: relative;
+        @media (max-width: 1070px) {
+            padding-left: 60px;
+        }
+        @media (max-width: 900px) {
+            padding-left: 20px;
+        }
+        @media (max-width: 840px) {
+            padding: 0;
+        }
         .portrait-wrapper {
             @include portrait-wrapper();
             #portrait {
@@ -290,10 +391,16 @@
             ::before {
                 bottom: calc(100% - 5px);
                 background-image: url(../img/jeff-rene_before.png);
+                @media (max-width: 1070px) {
+                    visibility: hidden;
+                }
             }
             ::after {
                 top: calc(100% - 5px);
                 background-image: url(../img/jeff-rene_after.png);
+                @media (max-width: 1070px) {
+                    visibility: hidden;
+                }
             }
             ::before, ::after {
                 @include before-after();
@@ -303,13 +410,15 @@
     }
 }
 
-.founders__even::after {
-    background-color: #466684;
-    bottom: 0;
-    content: "";
-    position: absolute;
-    right: 120px;
-    top: 0;
-    width: 100vw;
-    z-index: -1;
+@media (min-width: 1070px) {
+    .founders__even::after {
+        background-color: #466684;
+        bottom: 0;
+        content: "";
+        position: absolute;
+        right: 120px;
+        top: 0;
+        width: 100vw;
+        z-index: -1;
+    }
 }
