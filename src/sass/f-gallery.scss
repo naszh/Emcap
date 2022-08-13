@@ -128,9 +128,12 @@
 }
 
 .f-gallery button {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-color: #fff;
     #bt-link {
         @include bt-link();
-        background-color: #fff;
         color: $black;
     }
     #bt-link::before, #bt-link::after {
@@ -145,4 +148,43 @@
         border: 1px solid $peach;
         inset: 5px 7px 7px 5px;
     }
+}
+
+.f-gallery button::before, .f-gallery button::after {
+    background-color: #e5745d;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.f-gallery button::before {
+    transform: translateY(-100%);
+    transition: transform 0ms ease-in-out;
+    }
+
+.f-gallery button::after {
+    transform: translateY(100%);
+    transition: transform .3s ease-in-out;
+} 
+
+.f-gallery button:hover::before {
+    transform: translateY(0);
+    transition: transform .3s ease-in-out;
+}
+
+.f-gallery button #bt-link:focus, .f-gallery button #bt-link:hover {
+    color: #fff;
+}
+
+.f-gallery button #bt-link:hover::before, .f-gallery button #bt-link:hover::after {
+    border: 1px solid #fff;
+}
+
+.f-gallery button:hover::after {
+    transform: translateY(0);
+    transition: transform 0ms ease-in-out;
+    transition-delay: .3s;
 }

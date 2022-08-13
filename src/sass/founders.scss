@@ -204,12 +204,12 @@
             position: relative;
             overflow: hidden;
             z-index: 0;
+            background-color: #fff;
             @media (max-width: 600px) {
                 display: none;
             }
             #bt-link {
                 @include bt-link();
-                background-color: #fff;
                 color: $black;
             }
             #bt-link::before, #bt-link::after {
@@ -304,12 +304,14 @@
             background-color: inherit;
             position: relative;
             width: fit-content;
+            z-index: 0;
+            overflow: hidden;
+            background-color: #324f6b;
             @media (max-width: 600px) {
                 display: none;
             }
             #bt-link {
                 @include bt-link();
-                background-color: #324f6b;
                 color: #fff;
             }
             #bt-link::before, #bt-link::after {
@@ -422,4 +424,83 @@
         width: 100vw;
         z-index: -1;
     }
+}
+
+
+#founders__odd-bt::before, #founders__odd-bt::after {
+    background-color: #e5745d;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#founders__odd-bt::before {
+    transform: translateY(-100%);
+    transition: transform 0ms ease-in-out;
+    }
+
+#founders__odd-bt::after {
+    transform: translateY(100%);
+    transition: transform .3s ease-in-out;
+} 
+
+#founders__odd-bt:hover::before {
+    transform: translateY(0);
+    transition: transform .3s ease-in-out;
+}
+
+.founders__odd .founders__about #founders__odd-bt #bt-link:focus, .founders__odd .founders__about #founders__odd-bt #bt-link:hover {
+    color: #fff;
+}
+
+.founders__odd .founders__about #founders__odd-bt #bt-link:hover::before, .founders__odd .founders__about #founders__odd-bt #bt-link:hover::after {
+    border: 1px solid #fff;
+}
+
+#founders__odd-bt:hover::after {
+    transform: translateY(0);
+    transition: transform 0ms ease-in-out;
+    transition-delay: .3s;
+}
+
+.founders__even .founders__about button::before, .founders__even .founders__about button::after {
+    background-color: $blue;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.founders__even .founders__about button::before {
+    transform: translateY(-100%);
+    transition: transform 0ms ease-in-out;
+}
+
+    .founders__even .founders__about button::after {
+    transform: translateY(100%);
+    transition: transform .3s ease-in-out;
+} 
+
+.founders__even .founders__about button:hover::before {
+    transform: translateY(0);
+    transition: transform .3s ease-in-out;
+}
+
+.founders__even .founders__about button:hover::after {
+    transform: translateY(0);
+    transition: transform 0ms ease-in-out;
+    transition-delay: .3s;
+}
+
+.founders__even .founders__about button #bt-link:focus, .founders__even .founders__about button #bt-link:hover {
+    color: #324f6b
+}
+
+.founders__even .founders__about button #bt-link:hover::before, .founders__even .founders__about button #bt-link:hover::after {
+    border: 1px solid #324f6b;
 }
