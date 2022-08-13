@@ -6,10 +6,10 @@
     padding: 0 30px;
     margin-bottom: 170px;
     @media (max-width: 1070px) {
-        margin-bottom: 80px;
+        margin-bottom: 120px;
     }
     @media (max-width: 600px) {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
         padding: 0;
     }
 }
@@ -21,7 +21,6 @@
 }
 
 .founders__title {
-    margin-top: 60px;
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
@@ -32,6 +31,9 @@
     @media (max-width: 1070px) {
         margin: 30px auto;
     }
+    @media (max-width: 900px) {
+        margin: 110px auto 30px;
+    }
     div {
         padding-left: 40px;
         padding-right: 40px;
@@ -39,9 +41,6 @@
         @media (max-width: 1350px) {
             padding: 0 20px;
             width: 83.3333333333%;
-        }
-        @media (max-width: 900px) {
-            width: 100%;
         }
         h5 {
             font-family: 'Styrene', sans-serif;
@@ -59,7 +58,7 @@
             font-weight: 200;
             text-align: center;
             line-height: 1.2;
-            @media (max-width: 600px) {
+            @media (max-width: 750px) {
                 font-size: 41px;
             }
             a {
@@ -82,7 +81,7 @@
     position: absolute;
     bottom: -1px;
     left: 0;
-    @media (max-width: 600px) {
+    @media (max-width: 750px) {
         width: 115px;
     }
 }
@@ -124,20 +123,23 @@
     }
 }
 
+@media (max-width: 1350px) {
+    #vertical {
+        display: none;
+    }
+    .founders__odd>span {
+        display: none;
+    }
+}
+
 .founders__odd {
     @include founder();
     color: $black;
-    @media (max-width: 900px) {
-        flex-direction: column;
-        padding-left: 20px;
-        padding-right: 20px;
-        width: 100%;
-    }
     #vertical {
-        @include founders__portrait_span();
-        transform: translateX(-50%);
-        @media (max-width: 1350px) {
-            visibility: hidden;
+        visibility: hidden;
+        @media (min-width: 1350px) and (min-height: 800px) {
+            @include founders__portrait_span();
+            transform: translateX(-50%);
         }
     }
     .founders__portrait {
@@ -278,7 +280,6 @@
 .founders__even {
     @include founder();
     color: #fff;
-    padding-bottom: 80px;
     position: relative;
     justify-content: space-between;
     @media (max-width: 900px) {
@@ -361,13 +362,13 @@
 
 .founders__even {
     #vertical {
-        @include founders__portrait_span();
-        transform: translateX(50%);
-        right: 40px;
-        margin-top: 30px;
-        @media (max-width: 1350px) {
-            visibility: hidden;
+        @media (min-width: 1350px) and (min-height: 800px) {
+            @include founders__portrait_span();
+            transform: translateX(50%);
+            right: 40px;
+            margin-top: 30px;
         }
+        visibility: hidden;
     }
     .founders__portrait {
         padding-left: 120px;

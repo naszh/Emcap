@@ -2,9 +2,16 @@
     display: flex;
     padding: 0 40px;
     max-width: 1400px;
-    width: 100%;
+    // width: 100%;
+    margin: 0 auto;
     @media (max-width: 1350px) {
         padding: 0 20px;
+    }
+    @media (max-width: 900px) {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
     }
 }
     
@@ -20,6 +27,7 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1.5px $black;
     line-height: 100%;
+    visibility: visible;
 }
 
 @mixin portrait-wrapper {
@@ -30,16 +38,22 @@
 }
 
 @mixin portrait {
-    height: 800px;
+    // height: auto;
+    // width: 583px;
     width: auto;
-    @media (max-width: 1350px) {
-        height: 700px;
+    max-height: 550px;
+    // @media (max-width: 1350px) {
+    //     max-height: 700px;
+    // }
+    @media (min-width: 1350px) and (min-height: 800px) {
+        max-height: 800px;
     }
     @media (max-width: 900px) {
         width: 100%;
         object-fit: cover;
         height: auto;
     }
+    
 }
 
 @mixin before-after {
@@ -57,9 +71,10 @@
     flex-direction: column;
     justify-content: center;
     padding: 60px 0;
-    max-width: 100%;
+    width: 100%;
     @media (max-width: 1070px) {
         padding: 30px 0 0;
+        position: relative;
     }
 }
 

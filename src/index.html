@@ -19,18 +19,28 @@
 </head>
 <body>
     <header>
-        <span class="dots">... <div id="border"><a href="#">Emergence is hiring!</a></div></span>
+        <div class="hiring">
+            <span class="dots">... <div id="border"><a href="#">Emergence is hiring!</a></div></span>
+        </div>
         <div class="nav">
             <img src="./img/logo.png" alt="logo">
-            <nav>
+
+            <div class="burger-menu">
+                <input id="menu-toggle" type="checkbox" />
+                <label class="menu-btn" for="menu-toggle">
+                    <span></span>
+                </label>
                 <ul class="nav__row">
+                    <li><a class="nav__row__item" id="menu-item" href="#">Home</a></li>
                     <li><a class="nav__row__item" href="#">Portfolio</a></li>
                     <li><a class="nav__row__item" href="#">Thoughts</a></li>
                     <li><a class="nav__row__item" href="#">Press</a></li>
                     <li><a class="nav__row__item" href="#">About</a></li>
-                    <li><a class="nav__row__item" href="#">Talent</a></li>
+                    <li><a class="nav__row__item" id="hidden-item" href="#">Talent</a></li>
+                    <li><a class="nav__row__item" id="menu-item" href="#">Portfolio Jobs</a></li>
+                    <li><a class="nav__row__item" id="menu-item" href="#">Join our team</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </header>
     <main>

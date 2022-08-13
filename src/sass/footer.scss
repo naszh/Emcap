@@ -5,6 +5,11 @@ footer {
     background-color: $darkerblue;
     padding: 0 30px;
     color: #fff;
+    position:relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
     @media (max-width: 600px) {
         padding: 0;
     }
