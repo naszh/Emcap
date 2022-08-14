@@ -164,6 +164,7 @@ bottom: -3px;
     font-size: 50px;
     font-weight: 700;
     letter-spacing: 2px;
+    text-align: center;
     text-transform: uppercase;
     display: block;
     padding: 20px 0;
@@ -205,3 +206,11 @@ bottom: -3px;
     transition-duration: .25s;
 }
 }
+
+a.nav__row__item {
+    @media (max-width: 600px) {
+        font-size: 30px;
+        padding: 10px 0;
+    }
+}
+
