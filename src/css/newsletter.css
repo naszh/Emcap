@@ -23,7 +23,7 @@
 }
 @media (max-width: 900px) {
   .newsletter .newsletter-wrap {
-    padding: 60px 0;
+    padding: 60px 20px;
   }
 }
 .newsletter .newsletter-wrap h3 {

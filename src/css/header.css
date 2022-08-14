@@ -153,6 +153,7 @@ body {
     font-size: 50px;
     font-weight: 700;
     letter-spacing: 2px;
+    text-align: center;
     text-transform: uppercase;
     display: block;
     padding: 20px 0;
@@ -187,5 +188,11 @@ body {
   }
   .nav__row__item {
     transition-duration: 0.25s;
+  }
+}
+@media (max-width: 600px) {
+  a.nav__row__item {
+    font-size: 30px;
+    padding: 10px 0;
   }
 }
