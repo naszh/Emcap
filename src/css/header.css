@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-  background-color: #f9f4f1;
+  background-color: lightgrey;
 }
 
 @media (min-width: 900px) {
@@ -114,7 +114,7 @@ body {
   }
   .nav {
     padding: 20px;
-    background-color: #f9f4f1;
+    background-color: lightgrey;
     left: 0;
     position: fixed;
     right: 0;

@@ -4,7 +4,8 @@ html, body {
     overflow-x: hidden;
 }
 body {
-    background-color: #f9f4f1;
+    // background-color: #f9f4f1;
+    background-color: lightgrey;
 }
 
 @media (min-width: 900px) {
@@ -121,7 +122,8 @@ bottom: -3px;
 
 .nav {
     padding: 20px;
-    background-color: #f9f4f1;
+    // background-color: #f9f4f1;
+    background-color: lightgrey;
     left: 0;
     position: fixed;
     right: 0;
